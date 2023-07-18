@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+        <body>
+            Hello World!
+            <div class="container"> 
+                <!-- 每一塊板塊，我們都要先用<div>標籤當作容器，因為最上層的<div>沒有其他意義，所以我們用"container"屬性，透過Bootstrap讓瀏覽器知道包在這個標籤內的東西要屬於同一個區塊 -->
+                                <div class="row"> 
+                <!-- 接下來，我們希望這個區域內有兩個平行的區塊(兩行)，所以再加入兩個<div>並用"row"屬性，在這個屬性內的文字在超過板塊寬度後會自動換行 -->
+                                <div class="col-md-8 offset-md-2 text-center">
+                <!-- 在這裡我們才設定文字版塊的詳細屬性，"col-md-8"代表我們主要想顯示在電腦螢幕上，並且用8個縱列的寬度；"offset-md-2"代表我們希望在左邊先空2個縱列寬，這樣就可以達到置中的效果了；"text-center"則表示我們希望這裡的文字置終於板塊，而不是從左開始 -->
+                                    <h2>關於作者</h2>
+                                </div>
+                                </div>
+                                <div class="row"> 
+                <!-- 第二個平行的區塊 -->
+                                    <div class="col-md-4 text-center">
+                                        <img id="mypic" src="pictures/69874555_p0_master1200.jpg"> 
+                <!-- 這是一個圖片標籤，代表我希望在這裡顯示一個圖片，並給他一個id名，以便之後用CSS修飾 -->
+                                        <h2 style="font-size: 20; font-weight: 600;">林子軒<br>(Lin Tzu Hsuan)</h2> 
+                <!-- 這裡的style是CSS的語法，因為像這裡有跟別的<h2>有不同的樣式需求，所以直接寫在這裡客製化，而不是寫在css檔內 -->
+                                    </div>
+                                    <div class="col-md-8 text-left">
+                                        <p style="font-size: 20;margin-bottom: 5;" class="lead">研究領域:音訊處理、DeepLearning、ML</p>
+                                        <h3 style="font-size: 15; margin-bottom: 30; font-weight: 600;">清華大學 資訊應用與系統研究所<br>台灣大學 工商管理系企業管理組</h3>
+                                        <p>近年來，於現在的的音訊處理技術中...(some words)</p>
+                                        <p>在這個系統中...(some words)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="jumbotron">
+                                <!-- 這次我們使用"jumbotron"屬性，這是一個有底色且無邊界的板塊比較適合標題區塊使用，雖然Bootstrap有提供其他附加屬性讓開發者更改jumbotron的樣式，但我覺得直接用CSS來修改比較直觀(ex:底色用"background"修改) -->
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <h1>Real-time pop music accompaniment generation according to vocal melody by deep learning models</h1>
+                                                            <p class="lead">基於人聲旋律的流行音樂即時伴奏生成系統</p> '
+                                <!-- "lead"屬性可以強調指定的文字 -->
+                                                            <a class="btn" href="files/NTHU_LinTzuHsuan_MasterThesis.pdf" target="_blank">Paper</a> </p> 
+                                <!-- "btn"屬性會調用Bootstrap提供的按鈕樣板，會有一些基本的點選反應之類的，算是簡約好看的風格；像這個按鈕我們希望可以打開一個PDF檔案，所以用"herf"指向那個檔案的地址 -->
+                                                            <a class="btn" href="https://github.com/tw40210/Hierarchica_remake" target="_blank" style=" 
+                                                            margin-left: 33px;
+                                                            background: #01B468;
+                                                            ">Github</a> 
+                                <!-- 這個按鈕是希望連結到一個外部網站，所以在"href"中放入那個網站的網址，另外用"target"屬性告訴瀏覽器，我希望這個網站以新分頁的形式開啟 -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            h1,h2,h3,h4,h5,h6{
+                                                font-family: 'Noto Sans';
+                                            } \\ <h1>~<h6>的標籤都以這個屬性修飾
+                                            
+                                            p.lead{
+                                                font-weight: 600;
+                                                color: black;
+                                            } \\ <p>標籤如果class屬性是”lead”都以這個屬性修飾
+                                            
+                                            #intro .jumbotron{
+                                                height: 70vh;
+                                            } \\ 在id屬性為”intro”的標籤內，如果class屬性是” jumbotron”都以這個屬性修飾
+                                            \\ id屬性通常就是用來特別指定某個物件用的像是，<div class=”row” id=”intro”>
+                                            
+                                            header nav a img{
+                                                width: 38px;
+                                            } \\ 在<header>標籤內的<nav>標籤內的<a>標籤內的<img>標籤都以這個屬性修飾
+                                            \\ 主要是想展示如何指定包在其他標籤內的標籤
+        </body>
+    </head>
+</html>
